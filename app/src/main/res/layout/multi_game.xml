@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/blackboard"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/boardWrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="20.0dip"
+        android:layout_above="@+id/adView">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/board"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/buttons"
+            android:background="@drawable/board"
+            android:stretchColumns="*"
+            android:weightSum="3">
+
+            <TableRow
+                android:id="@+id/row1"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button_11"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blank" />
+
+                <Button
+                    android:id="@+id/button_12"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blank"
+                    android:tag="1" />
+
+                <Button
+                    android:id="@+id/button_13"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blank"
+                    android:tag="2" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row2"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button_21"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blank"
+                    android:tag="3" />
+
+                <Button
+                    android:id="@+id/button_22"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blank"
+                    android:tag="4" />
+
+                <Button
+                    android:id="@+id/button_23"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blank"
+                    android:tag="5" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row3"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button_31"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blank"
+                    android:tag="6" />
+
+                <Button
+                    android:id="@+id/button_32"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blank"
+                    android:tag="7" />
+
+                <Button
+                    android:id="@+id/button_33"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blank"
+                    android:tag="8" />
+            </TableRow>
+        </TableLayout>
+
+        <ImageView
+            android:id="@id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="5.0dip"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/player1Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Player 1"
+                    android:textColor="@android:color/white"
+                    android:textSize="20.0sp"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/human_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="#FFA115"
+                    android:textSize="20.0sp" />
+
+                <TextView
+                    android:id="@+id/player2Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Player 2"
+                    android:textColor="@android:color/white"
+                    android:textSize="20.0sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/droid_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="#76A4FF"
+                    android:textSize="20.0sp" />
+
+
+            </TableRow>
+
+
+            <Button
+                android:id="@+id/reset"
+                style="@style/btnStyleGenoa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:text="Reset"
+                android:textSize="25sp" />
+        </TableLayout>
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5246243065157193/8716517520">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>

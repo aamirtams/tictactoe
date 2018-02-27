@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/game_over"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="300.0dip"
+    android:orientation="vertical"
+    android:padding="5.0dip">
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:paddingBottom="5.0dip"
+        android:textSize="30.0dip" />
+</LinearLayout>
